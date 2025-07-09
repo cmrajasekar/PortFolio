@@ -64,3 +64,18 @@ const scrollActive = () => {
 };
 window.addEventListener("scroll", scrollActive);
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 700,
+  delay: 40,
+  // reset: true, //Animation Repeat
+});
+
+sr.reveal(`.profile,.contact__form`);
+sr.reveal(`.info`, { origin: "left", delay: 400 });
+sr.reveal(`.skills`, { origin: "left", delay: 600 });
+sr.reveal(`.about`, { origin: "right", delay: 800 });
+sr.reveal(`.projects__card, .services__cards,.experience__card`, {
+  interval: 50,
+});
